@@ -30,11 +30,8 @@ type ContentBlockStartEvent struct {
 	MessageEvent
 	Index        int `json:"index"`
 	ContentBlock struct {
-		Type         string `json:"type"`
-		Text         string `json:"text"`
-		CacheControl struct {
-			Type string `json:"type,omitempty"`
-		} `json:"cache_control,omitempty"`
+		Type string `json:"type"`
+		Text string `json:"text"`
 	} `json:"content_block"`
 }
 
@@ -46,11 +43,8 @@ type ContentBlockDeltaEvent struct {
 	MessageEvent
 	Index int `json:"index"`
 	Delta struct {
-		Type         string `json:"type"`
-		Text         string `json:"text"`
-		CacheControl struct {
-			Type string `json:"type,omitempty"`
-		} `json:"cache_control,omitempty"`
+		Type string `json:"type"`
+		Text string `json:"text"`
 	} `json:"delta"`
 }
 

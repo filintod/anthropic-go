@@ -17,14 +17,12 @@ func main() {
 		panic(err)
 	}
 
-	// Prepare a message request
 	request := anthropic.NewMessageRequest(
 		[]anthropic.MessagePartRequest{{Role: "user", Content: []anthropic.ContentBlock{anthropic.NewTextContentBlock("Hello, world!")}}},
-		anthropic.WithModel[anthropic.MessageRequest](anthropic.ClaudeV2_1),
+		anthropic.WithModel[anthropic.MessageRequest](anthropic.Claude35Sonnet),
 		anthropic.WithMaxTokens[anthropic.MessageRequest](20),
 	)
 
-	// Call the Message method
 	response, err := client.Message(ctx, request)
 	if err != nil {
 		panic(err)

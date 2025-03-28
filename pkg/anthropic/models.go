@@ -11,6 +11,9 @@ const (
 	// Highest level of intelligence and capability
 	Claude35Sonnet Model = "claude-3-5-sonnet-latest"
 
+	Claude37Sonnet Model = "claude-3-7-sonnet-latest"
+	Claude37Sonnet_20250219 = "claude-3-7-sonnet-20250219"        
+
 	// New version of claude-3-5-sonnet
 	Claude35Sonnet_20241022 Model = "claude-3-5-sonnet-20241022"
 

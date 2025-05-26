@@ -11,6 +11,8 @@ const (
 	Claude37Sonnet Model = "claude-3-7-sonnet-latest"
 	Claude37Sonnet_20250219 Model = "claude-3-7-sonnet-20250219"
 
+	Claude40Sonnet_20250514 Model = "claude-sonnet-4-20250514"
+
 	// New version of claude-3-5-sonnet
 	Claude35Sonnet_20241022 Model = "claude-3-5-sonnet-20241022"
 
@@ -81,7 +83,7 @@ const (
 
 func (m Model) IsImageCompatible() bool {
 	switch m {
-	case Claude3Haiku, Claude3Opus, Claude3Sonnet, Claude35Sonnet, Claude35Sonnet_20241022, Claude35Sonnet_20240620, Claude37Sonnet_20250219, Claude37Sonnet:
+	case Claude40Sonnet_20250514, Claude3Haiku, Claude3Opus, Claude3Sonnet, Claude35Sonnet, Claude35Sonnet_20241022, Claude35Sonnet_20240620, Claude37Sonnet_20250219, Claude37Sonnet:
 		return true
 	}
 	return false
@@ -89,7 +91,7 @@ func (m Model) IsImageCompatible() bool {
 
 func (m Model) IsMessageCompatible() bool {
 	switch m {
-	case Claude3Opus, Claude3Sonnet, Claude3Haiku, ClaudeV2_1, Claude35Sonnet, Claude35Sonnet_20241022, Claude35Sonnet_20240620, Claude35Haiku, Claude35Haiku_20241022, Claude37Sonnet_20250219, Claude37Sonnet:
+	case Claude40Sonnet_20250514, Claude3Opus, Claude3Sonnet, Claude3Haiku, ClaudeV2_1, Claude35Sonnet, Claude35Sonnet_20241022, Claude35Sonnet_20240620, Claude35Haiku, Claude35Haiku_20241022, Claude37Sonnet_20250219, Claude37Sonnet:
 		return true
 	}
 	return false
